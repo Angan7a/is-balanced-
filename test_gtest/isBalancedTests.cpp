@@ -8,6 +8,7 @@ TEST(isBalanced, noPass)
     EXPECT_EQ(isBalanced(""), 0);
     EXPECT_EQ(isBalanced("[["), 0);
     EXPECT_EQ(isBalanced("))"), 0);
+    EXPECT_EQ(isBalanced("}}}}}}}}}}]{}]"), 0);
 }
 
 TEST(isBalanced, Pass)
