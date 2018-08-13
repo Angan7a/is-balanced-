@@ -8,23 +8,20 @@ bool isBalanced(std::string s)
         std::vector<char> a;
         for (int i = 0; i < s.size(); i++)
         {
-            if (s[i] == '{') a.push_back('{');
-            if (s[i] == '[') a.push_back('[');
-            if (s[i] == '(') a.push_back('(');
-            if (s[i] == '}')
+            switch (s[i])
             {
-                if (a.empty() || a.back() != '{') return 0;
-                a.pop_back();
-            }
-            if (s[i] == ']')
-            {
-                if (a.empty() || a.back() != '[') return 0;
-                a.pop_back();
-            }
-            if (s[i] == ')')
-            {
-                if (a.empty() || a.back() != '(') return 0;
-                a.pop_back();
+                case '{' : a.push_back('{'); break;
+                case '[' : a.push_back('['); break;
+                case '(' : a.push_back('('); break;
+                case '}' :
+                    if (a.empty() || a.back() != '{') return 0;
+                    a.pop_back(); break;
+                case ']' :
+                    if (a.empty() || a.back() != '[') return 0;
+                    a.pop_back(); break;
+                case ')' :
+                    if (a.empty() || a.back() != '(') return 0;
+                    a.pop_back(); break;
             }
         }
         if (a.empty()) return 1;
