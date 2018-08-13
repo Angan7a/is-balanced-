@@ -2,7 +2,7 @@
 #include <iostream>
 bool isBalanced(std::string s)
 {
-    if (s.size()%2 == 0)
+    if (s.size()%2 == 0 && s.size() != 0)
     {
         while(!s.empty())
         {

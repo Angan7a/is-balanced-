@@ -52,4 +52,14 @@ SCENARIO("Is this string balanced?") {
             }
         }
     }
+    GIVEN("empty string ") {
+        std::string s = {""};
+        WHEN("call function isBalanced()")
+        {
+            THEN("Expect 0")
+            {
+                REQUIRE(isBalanced(s) == 0);
+            }
+        }
+    }
 }
