@@ -9,6 +9,7 @@ bool isBalanced(std::string s)
             std::size_t iter;
             iter = s.find("{}");
             if (iter == std::string::npos) iter = s.find("[]");
+            if (iter == std::string::npos) iter = s.find("()");
             if (iter == std::string::npos) return 0;
             s.erase(iter, 2);
         }
