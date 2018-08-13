@@ -60,13 +60,13 @@ set(TEST_SRC_LIST
 )
 
 link_libraries(gtest)
-add_executable(${PROJECT_NAME}-ut ${TEST_SRC_LIST})
-target_link_libraries(${PROJECT_NAME}-ut ${PROJECT_NAME}-lib)
+add_executable(${PROJECT_NAME}-ut-gtest ${TEST_SRC_LIST})
+target_link_libraries(${PROJECT_NAME}-ut-gtest ${PROJECT_NAME}-lib)
 
 set(TEST_SRC_LIST_C
     test_catch/tests-main.cpp
     test_catch/tests-isBalanced.cpp
 )
 
-add_executable(${PROJECT_NAME}-ut-c ${TEST_SRC_LIST_C})
-target_link_libraries(${PROJECT_NAME}-ut-c ${PROJECT_NAME}-lib)
+add_executable(${PROJECT_NAME}-ut-catch ${TEST_SRC_LIST_C})
+target_link_libraries(${PROJECT_NAME}-ut-catch ${PROJECT_NAME}-lib)
