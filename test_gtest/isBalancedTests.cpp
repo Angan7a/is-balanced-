@@ -10,4 +10,5 @@ TEST(isBalanced, Pass)
 {
     EXPECT_EQ(isBalanced("{}"), 1);
     EXPECT_EQ(isBalanced("{{}}"), 1);
+    EXPECT_EQ(isBalanced("{{{}}}"), 1);
 }
