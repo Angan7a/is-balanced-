@@ -1,15 +1,17 @@
 #include "../inc/isBalanced.hpp"
+#include <vector>
 
 bool isBalanced(std::string s)
 {
     if (s.size() % 2 == 0 && s.size() != 0)
     {
-        int r = 0;
-        for (int i = 0; i < s.size()/2; i++)
+        std::vector<int> a;
+        for (int i = 0; i < s.size(); i++)
         {
-            if (s[i] == '{' && s[s.size()-1-i] == '}') r++;
+            if (s[i] == '{') a.push_back(1);
+            if (s[i] == '}') a.pop_back();
         }
-        if (r == s.size()/2) return 1;
+        if (a.empty()) return 1;
     }
     return 0;
 }
