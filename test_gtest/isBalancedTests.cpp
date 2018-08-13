@@ -5,3 +5,8 @@ TEST(isBalanced, noPass)
 {
     EXPECT_EQ(isBalanced("{"), 0);
 }
+
+TEST(isBalanced, Pass)
+{
+    EXPECT_EQ(isBalanced("{}"), 1);
+}
