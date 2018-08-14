@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/Angan7a/is-balanced-.svg?branch=master)](https://travis-ci.org/Angan7a/is-balanced-)
 
-    Program to determine if the the parentheses (),
-the brackets [], and the braces {}, in a string are balanced.
+    Program to determine if the the parentheses (),the brackets [], and the braces {}, in a string are balanced.
 
 For example:
 
