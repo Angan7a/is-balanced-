@@ -10,10 +10,10 @@ bool isBalanced(std::string s)
             iter = s.find("{}");
             if (iter == std::string::npos) iter = s.find("[]");
             if (iter == std::string::npos) iter = s.find("()");
-            if (iter == std::string::npos) return 0;
+            if (iter == std::string::npos) return false;
             s.erase(iter, 2);
         }
-        return 1;
+        return true;
     }
     return 0;
 }

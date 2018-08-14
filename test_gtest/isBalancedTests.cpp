@@ -3,19 +3,19 @@
 
 TEST(isBalanced, noPass)
 {
-    EXPECT_EQ(isBalanced("{"), 0);
-    EXPECT_EQ(isBalanced("{{{}"), 0);
-    EXPECT_EQ(isBalanced(""), 0);
-    EXPECT_EQ(isBalanced("[["), 0);
-    EXPECT_EQ(isBalanced("))"), 0);
-    EXPECT_EQ(isBalanced("}}}}}}}}}}]{}]"), 0);
-    EXPECT_EQ(isBalanced("({)}"), 0);
+    EXPECT_FALSE(isBalanced("{"));
+    EXPECT_FALSE(isBalanced("{{{}"));
+    EXPECT_FALSE(isBalanced(""));
+    EXPECT_FALSE(isBalanced("[["));
+    EXPECT_FALSE(isBalanced("))"));
+    EXPECT_FALSE(isBalanced("}}}}}}}}}}]{}]"));
+    EXPECT_FALSE(isBalanced("({)}"));
 }
 
 TEST(isBalanced, Pass)
 {
-    EXPECT_EQ(isBalanced("{}"), 1);
-    EXPECT_EQ(isBalanced("{{}}"), 1);
-    EXPECT_EQ(isBalanced("{{{}}}"), 1);
-    EXPECT_EQ(isBalanced("{}{{}}"), 1);
+    EXPECT_TRUE(isBalanced("{}"));
+    EXPECT_TRUE(isBalanced("{{}}"));
+    EXPECT_TRUE(isBalanced("{{{}}}"));
+    EXPECT_TRUE(isBalanced("{}{{}}"));
 }
