@@ -15,5 +15,5 @@ bool isBalanced(std::string s)
         }
         return true;
     }
-    return 0;
+    return false;
 }
