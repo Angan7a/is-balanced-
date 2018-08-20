@@ -14,7 +14,7 @@ SCENARIO("Is this string balanced?") {
         std::string s = {"{}"};
         WHEN("call function isBalanced()") {
             THEN("Expect TRUE") {
-                REQUIRE(isBalanced(s) == true);
+                REQUIRE( isBalanced(s) );
             }
         }
     }
@@ -30,7 +30,7 @@ SCENARIO("Is this string balanced?") {
         std::string s = {"{{}}"};
         WHEN("call function isBalanced()") {
             THEN("Expect TRUE") {
-                REQUIRE(isBalanced(s) == true);
+                REQUIRE( isBalanced(s) );
             }
         }
     }
@@ -38,7 +38,7 @@ SCENARIO("Is this string balanced?") {
         std::string s = {"{{{}}}"};
         WHEN("call function isBalanced()") {
             THEN("Expect TRUE") {
-                REQUIRE(isBalanced(s) == true);
+                REQUIRE( isBalanced(s) );
             }
         }
     }
@@ -54,7 +54,7 @@ SCENARIO("Is this string balanced?") {
         std::string s = {"[]"};
         WHEN("call function isBalanced()") {
             THEN("Expect TRUE") {
-                REQUIRE(isBalanced(s) == true);
+                REQUIRE( isBalanced(s) );
             }
         }
     }
@@ -62,7 +62,7 @@ SCENARIO("Is this string balanced?") {
         std::string s = {"()"};
         WHEN("call function isBalanced()") {
             THEN("Expect TRUE") {
-                REQUIRE(isBalanced(s) == true);
+                REQUIRE( isBalanced(s) );
             }
         }
     }
@@ -78,7 +78,7 @@ SCENARIO("Is this string balanced?") {
         std::string s = {"{}{{}}"};
         WHEN("call function isBalanced()") {
             THEN("Expect TRUE") {
-                REQUIRE(isBalanced(s) == true);
+                REQUIRE( isBalanced(s) );
             }
         }
     }
